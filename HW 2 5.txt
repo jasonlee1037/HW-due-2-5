@@ -1,0 +1,14 @@
+def get_at_content(dna, sig_figs):
+    # dnaU is the uppercase version of dna
+    dnaU = dna.upper()
+    length = len(dnaU)
+    a_count = dnaU.count('A')
+    t_count = dnaU.count('T')
+    at_content = float (a_count + t_count) / length
+    return round(at_content, sig_figs)
+my_at_content = get_at_content("ATGCGCGATCGATCGAATCG",1)
+print(str(my_at_content))
+print(get_at_content("ATGCATGCAACTGTAGC",2))
+print(get_at_content("aactgtagctagctagcagcgta",3))
+print(get_at_content("TTCGNNN",3))
+print(get_at_content("tnnacgnnat",1))
